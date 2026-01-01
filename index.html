@@ -1,23 +1,660 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+    <!-- Schema.org JSON-LD for Naver Snippet Optimization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "군산 이사 서비스 최신 정보",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Article",
+            "url": "#cost-factors",
+            "name": "군산 이사비용, 2026년 시장 동향과 절약 전략 분석"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "url": "#moving-types",
+            "name": "포장이사 vs 반포장이사: 군산 지역 이사 유형별 완벽 비교 가이드"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "url": "#local-info",
+            "name": "군산 신규 입주 아파트 및 지역별 이사 팁: 나운동, 수송동 집중 분석"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Article",
+            "url": "#faq",
+            "name": "자주 묻는 질문: 군산 이사 서비스 이용 시 주의사항과 해결책"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* CSS Styling based on user request (soft colors, clear hierarchy, easy to read) */
+        :root {
+            --primary-color: #2a6fdb; /* Trustworthy blue */
+            --secondary-color: #6c8cff; /* Lighter blue accent */
+            --accent-color: #f0f8ff; /* Lightest blue background */
+            --text-color: #333333;
+            --light-text-color: #555555;
+            --white: #ffffff;
+            --gray-line: #e0e0e0;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--gray-line);
+            padding: 15px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            margin: 5px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        section {
+            background-color: var(--white);
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+        }
+
+        section h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .cta-box {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 30px;
+            text-align: center;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: var(--accent-color);
+            border-radius: var(--border-radius);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="tel"],
+        .form-container select,
+        .form-container textarea {
+            width: calc(100% - 24px); /* Full width minus padding */
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid var(--gray-line);
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #1a5ac9;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f7f9fc;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Keyword List Styling */
+        .keyword-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .keyword-list li {
+            background-color: #eaf1f9;
+            color: var(--primary-color);
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* FAQ Styling */
+        .faq-item {
+            border: 1px solid var(--gray-line);
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            overflow: hidden;
+            background-color: var(--white);
+        }
+
+        .faq-item h3 {
+            background-color: var(--accent-color);
+            margin: 0;
+            padding: 20px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item .answer {
+            padding: 15px 20px;
+            border-top: 1px solid var(--gray-line);
+            display: none;
+            color: var(--light-text-color);
+        }
+
+        .faq-item.active .answer {
+            display: block;
+        }
+
+        /* Graph Placeholder Styling */
+        .graph-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #f4f7fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            color: var(--light-text-color);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1rem; }
+            nav .container { flex-direction: column; }
+            nav a { margin: 5px 0; border-bottom: none; }
+            section { padding: 20px; }
+            section h2 { font-size: 1.8rem; }
+            .cta-btn { font-size: 1rem; padding: 12px 25px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>군산이사 | 군산 포장이사, 용달이사 전문</h1>
+            <p>군산시 이삿짐센터 전문가가 알려주는 2026년 이사비용 절약 가이드</p>
+        </div>
+    </header>
+
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+        <div class="container">
+            <a href="#quote">무료 견적 신청</a>
+            <a href="#moving-types">이사 유형별 비교</a>
+            <a href="#cost-factors">이사 비용 분석</a>
+            <a href="#local-info">군산 지역별 팁</a>
+            <a href="#faq">자주 묻는 질문</a>
+        </div>
     </nav>
-    <main>
-      <h1>Home page</h1>
+
+    <main class="container">
+        <section id="quote">
+            <h2>군산 이사 견적 비교, 시작하세요</h2>
+            <p>이사 준비의 첫걸음은 합리적인 비용으로 믿을 수 있는 업체를 찾는 것입니다. 군산 이사 전문가가 검증한 업체들의 실시간 견적을 지금 바로 비교해 보세요.</p>
+            <div class="form-container">
+                <h3>이사 무료 견적 요청하기</h3>
+                <form id="movingQuoteForm" action="#" method="post">
+                    <label for="move-type">이사 종류 선택</label>
+                    <select id="move-type" name="move-type" required>
+                        <option value="">-- 이사 종류를 선택하세요 --</option>
+                        <option value="포장이사">포장이사 (포장/운반/정리)</option>
+                        <option value="반포장이사">반포장이사 (큰짐 포장/운반)</option>
+                        <option value="용달이사">용달이사 (운반만)</option>
+                        <option value="원룸이사">원룸이사/소형이사</option>
+                        <option value="보관이사">보관이사 (일시 보관)</option>
+                    </select>
+
+                    <label for="from-address">출발지 (군산 지역)</label>
+                    <input type="text" id="from-address" name="from-address" placeholder="예: 군산시 나운동, 24평 아파트" required>
+
+                    <label for="to-address">도착지 (지역/주거형태)</label>
+                    <input type="text" id="to-address" name="to-address" placeholder="예: 전주시 덕진구, 30평 빌라" required>
+
+                    <label for="moving-date">이사 희망 날짜</label>
+                    <input type="text" id="moving-date" name="moving-date" placeholder="예: 2026년 3월 15일 (손없는날 여부)" required>
+
+                    <label for="contact-phone">연락처</label>
+                    <input type="tel" id="contact-phone" name="contact-phone" placeholder="010-XXXX-XXXX" required>
+
+                    <input type="submit" value="무료 견적 요청하기">
+                </form>
+            </div>
+        </section>
+
+        <section id="moving-types">
+            <h2>군산 포장이사 vs 용달이사 vs 반포장이사, 내게 맞는 선택은?</h2>
+            <p>이사를 앞두고 가장 먼저 결정해야 할 것은 어떤 방식으로 이사를 진행할 것인지입니다. 이사 유형에 따라 서비스 범위, 비용, 준비의 수고로움이 크게 달라지기 때문입니다. 특히 군산 지역은 아파트 단지와 구도심 주택이 공존하는 만큼, 주거 형태에 맞는 이사 방식을 선택하는 것이 중요합니다.</p>
+
+            <h3>1. 포장이사 (Full Service Moving)</h3>
+            <p>포장이사는 이사의 전 과정을 이삿짐센터 전문가에게 맡기는 방식입니다. 짐 포장부터 운반, 배치, 마무리 정리까지 모두 포함되므로, 시간적 여유가 없거나 이사 경험이 부족한 분들에게 가장 적합합니다. 군산 나운동이나 수송동의 신축 아파트로 입주하는 경우, 짐이 많고 섬세한 정리가 필요할 때 포장이사가 선호됩니다. 비용은 가장 높지만, 이사 당일의 피로도를 최소화할 수 있다는 장점이 있습니다.</p>
+
+            <h3>2. 반포장이사 (Semi-Packing Moving)</h3>
+            <p>반포장이사는 포장이사와 용달이사의 중간 형태입니다. 이삿짐센터 직원이 큰 가구와 가전제품 위주로 포장하고 운반하며, 잔짐(주방용품, 옷가지 등)은 고객이 직접 포장하고 정리하는 방식입니다. 비용 절감을 원하지만 용달이사만큼 모든 짐을 직접 다루기는 부담스러운 경우에 좋습니다. 군산의 1인 가구, 투룸 이사 또는 어느 정도 이사 경험이 있는 분들이 주로 선택합니다.</p>
+
+            <h3>3. 용달이사 (Freight Moving)</h3>
+            <p>용달이사는 차량과 운전 인력만 제공하는 서비스입니다. 모든 짐 포장과 운반, 정리를 고객이 직접 처리해야 합니다. 짐이 적거나 (원룸이사, 오피스텔 이사) 단거리 이사일 때 비용을 크게 아낄 수 있습니다. 군산대학교나 KCNTC 주변 원룸 거주자, 짐이 적은 1인 가구에게 추천됩니다.</p>
+
+            <div class="table-container">
+                <h3>이사 유형별 서비스 비교표</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>포장이사</th>
+                            <th>반포장이사</th>
+                            <th>용달이사</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>짐 포장</strong></td>
+                            <td>업체 전담</td>
+                            <td>큰 짐만 업체, 잔짐은 고객</td>
+                            <td>고객 전담</td>
+                        </tr>
+                        <tr>
+                            <td><strong>운반 및 운송</strong></td>
+                            <td>업체 전담</td>
+                            <td>업체 전담</td>
+                            <td>업체 전담 (고객 도움 필요)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>정리 및 배치</strong></td>
+                            <td>업체 전담 (큰 가구 배치 및 잔짐 정리)</td>
+                            <td>큰 가구 배치만 업체, 잔짐은 고객</td>
+                            <td>고객 전담</td>
+                        </tr>
+                        <tr>
+                            <td><strong>비용 수준</strong></td>
+                            <td>가장 높음</td>
+                            <td>중간 수준</td>
+                            <td>가장 저렴함</td>
+                        </tr>
+                        <tr>
+                            <td><strong>추천 대상</strong></td>
+                            <td>이사 경험 부족, 바쁜 직장인, 짐 많은 가정</td>
+                            <td>비용 절감 희망, 이사 경험 있음, 투룸/소형 이사</td>
+                            <td>짐 적은 1인 가구, 단거리 이사, 비용 최우선</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="cost-factors">
+            <h2>군산이사비용 결정 요인과 2026년 가격 동향 분석</h2>
+            <p>군산에서 이사를 준비할 때 가장 큰 고민 중 하나는 비용입니다. 이사비용은 단순히 짐의 양이나 거리에 의해서만 결정되지 않습니다. 다양한 요인들이 복합적으로 작용하므로, 이사 견적을 정확하게 이해하고 절약 전략을 세우는 것이 중요합니다. 특히 2026년에는 군산시의 여러 개발 계획과 시장 변화로 인해 비용 변동성이 커질 것으로 예상됩니다.</p>
+
+            <h3>1. 주요 비용 결정 요인</h3>
+            <ul>
+                <li><strong>이사 물량 (짐 톤수):</strong> 이사 비용의 가장 기본적인 기준입니다. 짐이 많을수록 더 큰 차량(톤수)과 더 많은 인력이 필요하므로 비용이 증가합니다. 24평 아파트 기준 약 5톤, 34평 아파트 기준 약 7톤으로 계산됩니다.</li>
+                <li><strong>이동 거리:</strong> 군산 시내에서의 단거리 이사인지, 혹은 새만금 방조제를 넘어 김제시, 전주시, 익산시 등 인근 도시로 이동하는 장거리 이사인지에 따라 유류비 및 인건비가 달라집니다.</li>
+                <li><strong>작업 환경 (주거 형태):</strong> 아파트 고층의 경우 엘리베이터 유무, 사다리차 사용 여부에 따라 추가 비용이 발생합니다. 구도심 주택이나 빌라의 경우 좁은 골목길이나 계단 작업이 비용에 영향을 미칩니다.</li>
+                <li><strong>이사 날짜:</strong> 주말이나 '손 없는 날'은 이사 수요가 집중되어 비용이 20~30% 할증됩니다. 2026년 달력을 미리 확인하여 평일이나 비수기를 선택하면 큰 폭의 절약이 가능합니다.</li>
+                <li><strong>추가 서비스:</strong> 에어컨 설치/분해, 벽걸이 TV 설치, 피아노 운반 등 특수 물품 처리와 청소 서비스 등은 별도 비용이 발생합니다.</li>
+            </ul>
+
+            <div class="table-container">
+                <h3>주요 이사 비용 (톤수별) 예상표 (2026년 기준)</h3>
+                <p>※ 2026년 물가 상승률을 반영한 군산 지역 평균 예상치이며, 실제 견적은 업체별로 차이가 있을 수 있습니다. (손 없는 날, 주말, 장거리 이사 제외)</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>평형대/이사 종류</th>
+                            <th>예상 짐 톤수</th>
+                            <th>평일 예상 비용</th>
+                            <th>주말/손 없는 날 예상 비용</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>원룸/1인 가구 (용달이사)</td>
+                            <td>1톤 내외</td>
+                            <td>20만원 ~ 40만원</td>
+                            <td>30만원 ~ 50만원</td>
+                        </tr>
+                        <tr>
+                            <td>투룸/신혼부부 (반포장이사)</td>
+                            <td>2.5톤 내외</td>
+                            <td>50만원 ~ 80만원</td>
+                            <td>70만원 ~ 100만원</td>
+                        </tr>
+                        <tr>
+                            <td>24평 아파트 (포장이사)</td>
+                            <td>5톤 내외</td>
+                            <td>100만원 ~ 130만원</td>
+                            <td>120만원 ~ 160만원</td>
+                        </tr>
+                        <tr>
+                            <td>34평 아파트 (포장이사)</td>
+                            <td>7톤 내외</td>
+                            <td>130만원 ~ 180만원</td>
+                            <td>160만원 ~ 220만원</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>2. 2026년 군산 이사 시장 전망과 대응 전략</h3>
+            <p>군산시는 2026년 시정 계획을 '도시 대전환'으로 규정하고 미래 100년을 준비하는 대규모 재편에 나설 계획입니다. 이와 함께 새만금 산업단지 개발 가속화와 주거 환경 개선 사업이 맞물려 이사 수요에 영향을 미칠 것으로 보입니다. 특히 2026년에는 군산 신규 입주 아파트 단지(나운동, 수송동 일부)의 잔여 입주 물량과 재개발·재건축 지역의 이주 수요가 겹치면서 특정 시기에 이사 집중 현상이 심화될 수 있습니다. 이에 따라 이사비용의 변동폭이 커질 것으로 예상됩니다. 전문가들은 이사 날짜가 확정되면 최소 한 달 전에 여러 업체의 견적을 비교하고, 가능한 한 이사 비수기인 평일을 활용하여 비용을 절감하는 것을 권장합니다.</p>
+
+        </section>
+
+        <section id="local-info">
+            <h2>군산 지역별 이사 팁: 나운동, 수송동, 지곡동 등 주요 지역 분석</h2>
+            <p>군산시는 금강 하구와 서해안을 끼고 있는 지리적 특성상, 구도심과 신도심, 그리고 섬 지역까지 다양한 주거 형태가 공존합니다. 따라서 군산 지역 이사는 지역의 특성을 잘 이해하는 전문 업체를 선택하는 것이 중요합니다.</p>
+
+            <h3>1. 나운동, 수송동: 신도심 아파트 이사 집중 지역</h3>
+            <p>나운동과 수송동은 군산시의 대표적인 주거 밀집 지역입니다. 대규모 아파트 단지가 많아 이사 수요가 꾸준하며, 엘리베이터가 설치된 신축 아파트가 많아 이사 작업 자체는 비교적 수월합니다. 하지만 이사철에는 엘리베이터 사용 예약 경쟁이 치열하며, 특히 주차 공간 확보나 이사 차량 진입 동선 확인이 필수적입니다. 이 지역 이사 시에는 미리 관리사무소에 이사 일정을 통보하고, 사다리차 사용 가능 여부를 확인해야 합니다.</p>
+
+            <h3>2. 구도심 및 빌라 지역 (경암동, 조촌동, 미룡동)</h3>
+            <p>경암동 철길마을 인근이나 조촌동, 미룡동의 구도심 빌라 및 주택가 이사는 신도심과는 다른 특징이 있습니다. 좁은 골목길과 주차난, 오래된 건물 구조로 인해 사다리차 사용이 제한되거나 계단 작업이 필수적인 경우가 많습니다. 이 경우 인력 투입 비용이 증가할 수 있으므로, 방문 견적을 통해 정확한 작업 환경을 확인하는 것이 중요합니다.</p>
+
+            <h3>3. 읍·면 지역 및 특수 이사 (옥구읍, 대야면, 임피면, 옥도면)</h3>
+            <p>옥구읍, 대야면, 임피면 등 농어촌 지역 이사는 장거리 운송에 따른 추가 비용이 발생할 수 있습니다. 특히 옥도면 등 섬 지역 이사는 배편 운송, 물품 보관 등 특수 작업이 필요하며, 일반 이사와는 다른 전문성이 요구됩니다. 군산 이사 전문 업체 중에서도 섬 이사 경험이 풍부한 곳을 선택해야 합니다.</p>
+        </section>
+
+        <section id="consumer-guide">
+            <h2>이사 피해 예방: 믿을 수 있는 군산이삿짐센터 고르는 법</h2>
+            <p>저렴한 이사비용에 현혹되어 무허가 업체를 이용하거나, 계약서 없이 구두로 진행했다가 이사 당일 추가 비용을 요구받는 사례가 많습니다. 군산 지역에서 안전하고 만족스러운 이사를 하려면 다음 사항들을 반드시 확인해야 합니다.</p>
+
+            <h3>1. 정식 허가 업체 확인</h3>
+            <p>이삿짐센터는 관할 관청에 정식으로 등록된 '화물자동차 운송주선사업 허가업체'여야 합니다. 허가업체인지 여부는 화물운송종사자 협회의 '이사화물운송주선사업자 정보' 사이트에서 쉽게 확인할 수 있습니다. 정식 업체는 이사 중 발생하는 문제에 대해 '이사화물 배상 책임 보험'에 가입되어 있어, 파손 및 분실 시 보상을 받을 수 있습니다.</p>
+
+            <h3>2. 계약서 상세 검토</h3>
+            <p>전화나 온라인으로 받은 견적은 단순 참고용인 경우가 많습니다. 반드시 방문 견적을 받고, 견적서에 모든 서비스 내역과 비용을 상세히 기재해야 합니다. 특히 추가 요금이 발생할 수 있는 특수 품목(고가 미술품, 분해 조립 가구)이나 사다리차 이용 비용 등을 명확히 명시하고, 계약서 사본을 보관해야 합니다.</p>
+
+            <h3>3. 견적 비교 및 서비스 내용 확인</h3>
+            <p>최소 2~3곳 이상의 군산 이삿짐센터 견적을 비교하는 것이 좋습니다. 단순히 가격만 비교하지 말고, 제공되는 서비스의 범위(포장재, 정리, 청소 등)와 인력의 전문성(전문 포장팀 투입 여부)을 함께 고려해야 합니다. 저렴한 견적은 서비스 품질 저하로 이어질 수 있으므로, 합리적인 수준의 비용을 제시하는 업체를 선택하는 것이 현명합니다.</p>
+
+        </section>
+
+        <section id="faq">
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <div class="faq-item">
+                <h3>Q: 군산 포장이사 비용은 어떻게 책정되나요?</h3>
+                <div class="answer">
+                    <p>군산 포장이사 비용은 짐의 양(톤수), 이사 거리, 작업 인원, 이사 날짜, 사다리차 사용 여부 등 여러 요소에 의해 결정됩니다. 특히 이사 날짜가 성수기(3~5월)나 손 없는 날에 해당하면 비용이 크게 상승합니다. 정확한 견적을 위해서는 전문가의 방문 견적이 필수입니다.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>Q: 군산 원룸이사도 포장이사가 가능한가요?</h3>
+                <div class="answer">
+                    <p>네, 군산 원룸이사도 포장이사가 가능합니다. 짐이 적더라도 포장, 운반, 정리까지 모두 맡기고 싶은 분들을 위한 서비스입니다. 다만 짐의 양에 따라 용달이사 또는 반포장이사를 선택하는 것이 비용 효율적일 수 있습니다. 짐이 1.5톤 이하인 경우 반포장이사 또는 용달이사가 더 저렴합니다.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>Q: 이사 당일 추가 비용을 요구하는 경우 대처 방법은 무엇인가요?</h3>
+                <div class="answer">
+                    <p>이사 당일 추가 비용을 요구받는 것은 대표적인 소비자 피해 사례입니다. 사전에 계약서에 모든 항목을 명시했다면, 계약서에 없는 추가 비용은 지불할 의무가 없습니다. 만약 분쟁이 발생하면, 한국소비자원(국번 없이 1372)이나 지자체 민원실에 피해 구제를 신청할 수 있습니다. 계약 전에 반드시 방문 견적을 받고 서면 계약서를 작성하는 것이 중요합니다.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>Q: 군산 지역의 이사 비수기는 언제인가요?</h3>
+                <div class="answer">
+                    <p>일반적으로 1월~2월, 7월~8월이 이사 비수기에 속합니다. 이 기간에는 이사 수요가 적어 이사비용이 저렴하며, 원하는 날짜에 예약하기 수월합니다. 특히 평일 비수기 이사를 이용하면 주말이나 손 없는 날 대비 20% 이상의 비용 절감 효과를 볼 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>Q: 포장이사 계약 시 꼭 확인해야 할 점은 무엇인가요?</h3>
+                <div class="answer">
+                    <p>포장이사 계약 시에는 다음과 같은 사항을 꼼꼼히 확인해야 합니다. 1) 정식 허가 업체 여부, 2) 이사화물 배상 책임 보험 가입 여부, 3) 계약서에 명시된 인력 및 차량 투입 대수, 4) 추가 비용 발생 조건(사다리차, 에어컨 등), 5) 짐 정리 및 청소 서비스 범위. 이 다섯 가지를 확인하면 피해를 최소화할 수 있습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="related-keywords">
+            <h2>함께 많이 찾는 키워드 (군산 이사 관련)</h2>
+            <ul class="keyword-list">
+                <li>군산이사</li>
+                <li>군산포장이사</li>
+                <li>군산용달이사</li>
+                <li>군산이삿짐센터</li>
+                <li>군산이사비용</li>
+                <li>군산원룸이사</li>
+                <li>군산반포장이사</li>
+                <li>군산보관이사</li>
+                <li>군산나운동이사</li>
+                <li>군산수송동이사</li>
+                <li>군산지곡동이사</li>
+                <li>군산조촌동이사</li>
+                <li>군산경암동이사</li>
+                <li>군산구암동이사</li>
+                <li>군산미룡동이사</li>
+                <li>군산소룡동이사</li>
+                <li>군산개정면이사</li>
+                <li>군산옥구읍이사</li>
+                <li>군산대야면이사</li>
+                <li>군산임피면이사</li>
+                <li>군산서수면이사</li>
+                <li>새만금 이사</li>
+                <li>군산 아파트 이사</li>
+                <li>군산 빌라 이사</li>
+                <li>이사견적 비교</li>
+                <li>손 없는 날 이사비용</li>
+                <li>이사업체 피해 사례</li>
+                <li>이사 잘하는 곳</li>
+                <li>군산 이사 준비물</li>
+                <li>군산 포장이사 후기</li>
+            </ul>
+        </section>
+
+        <section id="external-links">
+            <h2>신뢰할 수 있는 외부 자료 및 참고 링크</h2>
+            <ul>
+                <li><a href="https://www.kca.go.kr/index.do" target="_blank" rel="noopener">한국소비자원 (이사화물 서비스 관련 피해 예방 정보)</a></li>
+                <li><a href="http://easylaw.go.kr/ptl/type/TypeView.do?topMenu=type&key=2251&lawtype=1&dsp=0&idx=418&search_area=00&keyword=%EC%9D%B4%EC%82%AC" target="_blank" rel="noopener">법제처 생활법령정보 (이사 관련 분쟁 해결 정보)</a></li>
+                <li><a href="https://www.molit.go.kr/USR/policyData/view.jsp?menuId=241&cnum=1527" target="_blank" rel="noopener">국토교통부 (이사화물 표준약관 및 소비자 권리 보호 방안)</a></li>
+                <li><a href="https://www.gunsan.go.kr/main/index.do" target="_blank" rel="noopener">군산시청 공식 웹사이트 (군산시 지역 정보 및 행정 안내)</a></li>
+                <li><a href="https://ko.wikipedia.org/wiki/%EA%B5%B0%EC%82%B0%EC%8B%9C" target="_blank" rel="noopener">위키백과 (군산시 행정구역 및 지리 정보)</a></li>
+            </ul>
+        </section>
     </main>
-  </body>
-</html>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 군산이사 서비스 정보. All Rights Reserved.</p>
+            <p>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">이용약관</a>
+                <a href="#">고객센터</a>
+            </p>
+            <p>본 사이트는 군산 지역 이사업체 비교정보를 제공하며, 실제 서비스 계약은 개별 업체와 직접 진행됩니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 토글 기능 스크립트
+        document.querySelectorAll('.faq-item h3').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = item.nextElementSibling;
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+                if (parent.classList.contains('active')) {
+                    answer.style.display = 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+
+  
